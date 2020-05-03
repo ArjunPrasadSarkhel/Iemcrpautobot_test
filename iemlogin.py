@@ -194,8 +194,7 @@ for (i,rows) in enumerate(table.find_elements_by_css_selector('tr')):
                 most_similar_answer = similarity_answers.index(min(similarity_answers))
                 #DROP_DOWNLIST FOR ANSWER
                 drop_downans = Select(driver.find_element_by_id("select1"))
-                drop_downans.select_by_visible_text(index_list[most_similar_answer]) #etai tow>haa puro sesh project j us:t Dindenetaion a problem goche indentation a probelm hoche
-                
+                drop_downans.select_by_visible_text(index_list[most_similar_answer]) 
                 driver.find_element_by_id("submit1").click()
                 time.sleep(3)
         driver.quit()
