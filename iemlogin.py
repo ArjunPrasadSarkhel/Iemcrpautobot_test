@@ -211,9 +211,3 @@ driver.close()
 
 
 
-#print(driver.find_element_by_xpath("/html/body/font/center[2]/table/tbody/tr[2]/td[1]").text)
- #single line run kore sublime? na:(hat run #hoche run
-#thick tow?hyaaa bhau kal testing korbi//ok sir k bolih onek kota dite ar video bas
-#aajke video ta pathabo?1 min e jeta korlo konta?dara pathabo
-##na dishna malta bolbe sob sesh tow abar keno debo nana eta debona oi B tar jaygay amader predictionon
-## 219 line code 3 din from scratch :D hmm moja elo:D ?HYA bas kal run kore iem group ABH SIR ESE looL pathabo abh sir ke?hmmok
