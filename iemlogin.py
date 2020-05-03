@@ -166,8 +166,7 @@ for (i,rows) in enumerate(table.find_elements_by_css_selector('tr')):
                 similarity_list = similarity_checking_cosine(average_question_to_match)
                 answer_index = similarity_list.index(min(similarity_list))
                 answer = NETWORKING_DATA.iloc[answer_index]['Answers'] 
-                
-                ##:(g)ajja keheyache loool
+                         
                 answers = [['A. FDM', 'B. TDM', 'C. WDM', 'D. All of these.']] 
 
                 answers = answers[0]
