@@ -204,6 +204,7 @@ for (i,rows) in enumerate(table.find_elements_by_css_selector('tr')):
                 
                 driver.find_element_by_id("submit1").click()
                 time.sleep(3)
+        driver.quit()
         break
 
             
