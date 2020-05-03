@@ -13,12 +13,12 @@ from gensim.models import Word2Vec
 from gensim.utils import simple_preprocess
 from gensim.models import KeyedVectors
 import warnings
-from scipy.spatial import distance      #Jupyter khol     
+from scipy.spatial import distance       
 warnings.filterwarnings('ignore')
 
-# eta desktop a rak netowk_question ta bas
-#eta run hote time lagbe :( ok 1hour? 10minokkk :() run ohbe eta time lageokk run hocheh akaahono :( hpoyche:D
-NETWORKING_DATA = pa.read_csv('network_questions.csv',encoding='unicode_escape') #netork quesiton ar path deboi?na age hok otaok eta d
+
+
+NETWORKING_DATA = pa.read_csv('yourfile.csv',encoding='unicode_escape')  #quesiton path 
 
 def words_embeddings():
     path = r"    "#put the path of the file from https://www.kaggle.com/syedamer/gnewsvector
@@ -30,8 +30,7 @@ def words_embeddings():
         
     return  word_embeddings_index     
 
-word_embeddings_index = words_embeddings() ## eta akbar run korbi first a tarpor ar na ekahne toke puro program run korte hoebna select and run ok
-
+word_embeddings_index = words_embeddings() 
 
 ## Sum up vectors of each word in a sentence and average it i.e the word_embeddings of the whole senetence
 def find_average_sentence_vector(sentence,MODEL,features=300):
@@ -119,7 +118,7 @@ for (i,rows) in enumerate(table.find_elements_by_css_selector('tr')):
 
     #for cells in rows.find_elements_bobjecty_tag_name('td'):
         #print(cells.text)#
-        table_rows = []#runhcohena iemcrp CORDUNE  JKRfsjfbsjdf bsjdfbsdjfl ol captcha api ekhon rakhene 
+        table_rows = []
         table_rows.append(rows.text)
         
         #spliting all wordsrow object
@@ -166,10 +165,10 @@ for (i,rows) in enumerate(table.find_elements_by_css_selector('tr')):
                 average_question_to_match = find_average_sentence_vector(question_to_match,MODEL=word_embeddings_index,features=300)
                 similarity_list = similarity_checking_cosine(average_question_to_match)
                 answer_index = similarity_list.index(min(similarity_list))
-                answer = NETWORKING_DATA.iloc[answer_index]['Answers'] #lol ami bhul diachi dataset a dara thick kori;v
+                answer = NETWORKING_DATA.iloc[answer_index]['Answers'] 
                 
                 ##:(g)ajja keheyache loool
-                answers = [['A. FDM', 'B. TDM', 'C. WDM', 'D. All of these.']] #bishal slow hoye jche :D o ekhane anwer gulo store korte hobe each timeh
+                answers = [['A. FDM', 'B. TDM', 'C. WDM', 'D. All of these.']] 
 
                 answers = answers[0]
                 answers_list = []
