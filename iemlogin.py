@@ -21,7 +21,7 @@ warnings.filterwarnings('ignore')
 NETWORKING_DATA = pa.read_csv('network_questions.csv',encoding='unicode_escape') #netork quesiton ar path deboi?na age hok otaok eta d
 
 def words_embeddings():
-    path = r"C:\Users\Arjun\GoogleNews-vectors-negative300.bin"
+    path = r"    "#put the path of the file from https://www.kaggle.com/syedamer/gnewsvector
     word_embeddings_index = {}
     word_vectors = KeyedVectors.load_word2vec_format(path,binary=True)
     for word,vector in zip(word_vectors.vocab,word_vectors.vectors):
