@@ -67,18 +67,18 @@ driver.get("https://www.iemcrp.com/")
 college = driver.find_element_by_link_text(("Institute of Engineering and Management,Kolkata(104)")).click()
 college
 
-#with open('captcha67.png', 'wb') as file:
-   #file.write(driver.find_element_by_xpath("/html/body/div[1]/form[2]/fieldset/img").screenshot_as_png)
+with open('captcha67.png', 'wb') as file:
+   file.write(driver.find_element_by_xpath("/html/body/div[1]/form[2]/fieldset/img").screenshot_as_png)
 
-#captcha_fn = "captcha67.png"
-#api_key = 'bef708712a62ca6c3bde984a95379c79' # api key -> https://anti-captcha.com/
-#captcha_fp = open(captcha_fn, 'rb')
-#client = AnticaptchaClient(api_key)
-#task = ImageToTextTask(captcha_fp)
-#job = client.createTask(task)
-#job.join()
+captcha_fn = "captcha67.png"
+api_key = '' # your api key here, get from -> https://anti-captcha.com/
+captcha_fp = open(captcha_fn, 'rb')
+client = AnticaptchaClient(api_key)
+task = ImageToTextTask(captcha_fp)
+job = client.createTask(task)
+job.join()
 #print(job.get_captcha_text())
-#captcha_image=job.get_captcha_text()#captcha_image will store the resulted captcha
+captcha_image=job.get_captcha_text()#captcha_image will store the resulted captcha
 
 time.sleep(2)
 #to select the dropdown as student
@@ -87,13 +87,13 @@ drop_down.select_by_visible_text("Student")
 
 #to enter username and password use this and captcha
 username = driver.find_element_by_id("text1")
-username.send_keys("12017004006103")#enter your Username
+username.send_keys("")#enter your Username
 
 password = driver.find_element_by_id("text2")
-password.send_keys("f00tball")#enter your password
+password.send_keys("")#enter your password
 
-#captchacatch = driver.find_element_by_id("text3")
-#captchacatch.send_keys(captcha_image)
+captchacatch = driver.find_element_by_id("text3")
+captchacatch.send_keys(captcha_image)
 
 time.sleep(5)
 
