@@ -193,10 +193,6 @@ for (i,rows) in enumerate(table.find_elements_by_css_selector('tr')):
                     #find cosine similarity
                     similarity_answers.append(distance.cosine(avg_vector_answer,answer_current_avg))
                 most_similar_answer = similarity_answers.index(min(similarity_answers))
-                #print("THE answer to question is option {}".format(index_list[most_similar_answer])) #holo tow?bbishal to ekane onno kichu de
-                
-                #most_similar_anser ta holo answer like A or B or C or D ota drop down a dibi ar submit
-                
                 #DROP_DOWNLIST FOR ANSWER
                 drop_downans = Select(driver.find_element_by_id("select1"))
                 drop_downans.select_by_visible_text(index_list[most_similar_answer]) #etai tow>haa puro sesh project j us:t Dindenetaion a problem goche indentation a probelm hoche
@@ -204,10 +200,5 @@ for (i,rows) in enumerate(table.find_elements_by_css_selector('tr')):
                 driver.find_element_by_id("submit1").click()
                 time.sleep(3)
         driver.quit()
-        break
-
-            
+        break           
 driver.close()
-
-
-
