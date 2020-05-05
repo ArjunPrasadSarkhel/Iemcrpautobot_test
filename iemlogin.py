@@ -112,7 +112,7 @@ time.sleep(5)
 
 main_page = driver.current_window_handle #store the current window
 
-iemcrp_examcode = "2020010729" 
+iemcrp_examcode = "" #Enter your iemcrp exam code here 
 table = driver.find_element_by_xpath("/html/body/font/center[2]/table")
 for (i,rows) in enumerate(table.find_elements_by_css_selector('tr')):
 
