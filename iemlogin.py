@@ -20,8 +20,8 @@ warnings.filterwarnings('ignore')
 
 NETWORKING_DATA = pa.read_csv('yourfile.csv',encoding='unicode_escape')  #quesiton path 
 
-def words_embeddings():
-    path = r"    "#put the path of the file from https://www.kaggle.com/syedamer/gnewsvector
+def words_embeddings():#Run this whole function only once // will take some time to run //
+    path = r""#put the path of the file from https://www.kaggle.com/syedamer/gnewsvector
     word_embeddings_index = {}
     word_vectors = KeyedVectors.load_word2vec_format(path,binary=True)
     for word,vector in zip(word_vectors.vocab,word_vectors.vectors):
@@ -58,7 +58,7 @@ def similarity_checking_cosine(average_question_to_match):
     return similarity_list
 
 
-PATH = "C:\Program Files (x86)\chromedriver.exe"
+PATH = "C:\Program Files (x86)\chromedriver.exe"#Path of your web driver
 
 driver = webdriver.Chrome(PATH)
 
