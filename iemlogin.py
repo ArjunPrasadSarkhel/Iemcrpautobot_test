@@ -18,7 +18,7 @@ warnings.filterwarnings('ignore')
 
 
 
-NETWORKING_DATA = pa.read_csv('yourfile.csv',encoding='unicode_escape')  #quesiton path 
+NETWORKING_DATA = pa.read_csv('yourfile.csv',encoding='unicode_escape')  #path of your subjects question.csv
 
 def words_embeddings():#Run this whole function only once // will take some time to run //
     path = r""#put the path of the file from https://www.kaggle.com/syedamer/gnewsvector
